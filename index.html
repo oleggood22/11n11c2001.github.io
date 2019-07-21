@@ -8,15 +8,15 @@
  	<link rel="stylesheet" href="./css/style.css">
  	<link rel="stylesheet" href="./css/animate.css">
  	<script src="./js/wow.js"></script>
- 	<script src="./js/scrollspy.js"></script>
 	<script>new WOW({offset: 160 }).init()</script>
+	<script src="./js/less.js" ></script>
 	<script type="text/javascript">
 		   window.addEventListener('scroll', function(e) {
 
         if( $(window).scrollTop() <= 50) {
             $('.wow').removeClass('animated');
             $('.wow').removeAttr('style');
-            new WOW({mobile: true,}).init();
+            new WOW({}).init();
         }
      });
 	</script>
@@ -81,7 +81,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section " id="what-we-do">
+				<div class=" section fp-section fp-table active fp-completely" id="what-we-do">
 					<div class="slide">
 						<div class="slide__background slide__background_what-we-do"></div>
 						<div class="slide__content container">
@@ -131,6 +131,7 @@
 											<li>4. Получить готовую работу.</li>
 										</ul>
 									</div>
+									<div class="work-process__inner_img wow bounceInUp"></div>
 								</div>
 							</div>
 						</div>
@@ -147,12 +148,13 @@
 										<div class="why-us__subtitle text-semibold wow bounceInUp">Мы команда</div>
 										<div class="why-us__description wow bounceInUp" data-wow-delay="250ms">Команда не только между собой, но и с заказчиком. Мы вмесе с Вами создаем то, что будет радовать Вас, Ваших клиентов и партнеров.</div>
 									</div>
+									<div class="why-us__inner_img wow bounceInUp"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class=" section " id="prices">
+				<div class=" section fp-section fp-table active fp-completely" id="prices">
 					<div class=" slide ">
 						<div class="slide__background slide__background_price"></div>
 						<div class="slide__content container">
@@ -198,7 +200,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="prices__col prices__col_description wow zoomIn" data-wow-delay="100ms" data-wow-duration="400ms">
+								<div class="prices__col prices__col_description wow animationFrames" data-wow-delay="100ms" data-wow-duration="400ms">
 									<div class="service-description-wrap">
 										<div class="service-description" id="serviceStandart">
 											Стандартное графическое оформление
@@ -314,7 +316,7 @@ var myFullpage = new fullpage('#fullpage', {
 	paddingTop: '-0.1em',
 	paddingBottom: '-1px',
 	fixedElements: '#header, .footer',
-	responsiveWidth: 0,
+	responsiveWidth: 1000,
 	responsiveHeight: 0,
 	responsiveSlides: false,
 	parallax: false,

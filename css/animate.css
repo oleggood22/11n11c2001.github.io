@@ -81,6 +81,24 @@
   transform-origin: center bottom;
 }
 
+@keyframes animationFrames{
+  0% {
+    transform:  scaleX(0.00) ;
+  }
+  30% {
+    transform:  scaleX(1.00) ;
+  }
+  55% {
+    transform:  scaleX(1.10) ;
+  }
+  100% {
+    transform:  scaleX(1.00) ;
+  }
+}
+
+.animationFrames {
+  animation-name: animationFrames;
+}
 @-webkit-keyframes flash {
   from,
   50%,

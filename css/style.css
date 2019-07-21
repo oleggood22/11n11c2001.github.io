@@ -847,7 +847,7 @@ svg {
 		align-items: stretch;
 	}
 }
-.work-process__inner:after {
+.work-process__inner_img {
 	content: '';
 	display: none;
 	max-width: 1126px;
@@ -861,12 +861,12 @@ svg {
 	z-index: -1;
 }
 @media (min-width: 768px) {
-	.work-process__inner:after {
+	.work-process__inner_img {
 		display: block;
 	}
 }
 @media (min-width: 1920px) {
-	.work-process__inner:after {
+	.work-process__inner_img {
 		position: absolute;
 		top: -30px;
 		right: -260px;
@@ -895,6 +895,8 @@ svg {
 	height: 3px;
 	margin: 30px 0 0;
 	background-color: #ffd8ff;
+	.wow;
+	.bounceInUp;
 }
 @media (min-width: 1920px) {
 	.work-process__title:after {
@@ -927,7 +929,7 @@ svg {
 		align-items: stretch;
 	}
 }
-.why-us__inner:after {
+.why-us__inner_img {
 	content: '';
 	display: none;
 	max-width: 745px;
@@ -941,12 +943,12 @@ svg {
 	z-index: -1;
 }
 @media (min-width: 768px) {
-	.why-us__inner:after {
+	.why-us__inner_img {
 		display: block;
 	}
 }
 @media (min-width: 1920px) {
-	.why-us__inner:after {
+	.why-us__inner_img {
 		position: absolute;
 		top: -120px;
 		right: -100px;
@@ -1299,3 +1301,4 @@ svg {
     z-index: 50;
     opacity: 0.30;
 }
+
