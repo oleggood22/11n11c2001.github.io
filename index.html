@@ -9,17 +9,6 @@
  	<link rel="stylesheet" href="./css/animate.css">
  	<script src="./js/wow.js"></script>
 	<script>new WOW({offset: 160 }).init()</script>
-	<script src="./js/less.js" ></script>
-	<script type="text/javascript">
-		   window.addEventListener('scroll', function(e) {
-
-        if( $(window).scrollTop() <= 50) {
-            $('.wow').removeClass('animated');
-            $('.wow').removeAttr('style');
-            new WOW({}).init();
-        }
-     });
-	</script>
 </head>
 <body>
 		<div class="layout">
@@ -34,7 +23,7 @@
 							<div class="lang">
 								<button class="lang__btn" data-toggle="dropdown">Rus</button>
 								<div class="lang__body">
-									<button class="lang__item">Rus</button>
+									<button href="rus.html" class="lang__item">Rus</button>
 									<button class="lang__item">Eng</button>
 								</div>
 							</div>
@@ -48,7 +37,7 @@
 						</button>
 						<div class="header-menu">
 							<a class="header-menu__link" data-menuanchor="what-we-do" href="#whatWeDo" id="whatWeDo_2">
-								<div class="header-menu__text">Чем мы занимаемся?</div>
+								<div class="box_1"></div><div class="header-menu__text">Чем мы занимаемся?</div>
 							</a>
 							<a class="header-menu__link" data-menuanchor="work-process" href="#workProcess" id="workProcess_2">
 								<div class="header-menu__text">Процесс работы</div>
@@ -87,15 +76,15 @@
 						<div class="slide__content container">
 							<div class="what-we-do">
 								<div class="what-we-do__col">
-									<div class="what-we-do__title wow bounceInDown">Чем мы занимаемся?</div>
-									<div class="what-we-do__description wow bounceInUp" data-wow-delay="250ms">
+									<div class="what-we-do__title wow bounceInUp">Чем мы занимаемся?</div>
+									<div class="what-we-do__description wow bounceInUp" data-wow-delay="50ms">
 										<p class="text-semibold">Мы - небольшая Российская команда дизайнеров. </p>
 										<p>Наша студия занимается качественным оформлением проектов любого вида с полной отдачей и <br> индивидуальным подходом.</p>
 									</div>
 								</div>
 								<div class="what-we-do__col">
-									<div class="what-we-do__title wow bounceInDown" data-wow-delay="550ms">Что мы делаем?</div>
-									<ul class="what-we-do__list wow bounceInUp" data-wow-delay="750ms">
+									<div class="what-we-do__title wow bounceInUp">Что мы делаем?</div>
+									<ul class="what-we-do__list wow bounceInUp" data-wow-delay="50ms">
 										<li>Оформление любого типа;</li>
 										<li>Создание эксклюзивного логотипа;</li>
 										<li>Интро;</li>
@@ -123,8 +112,8 @@
 							<div class="work-process">
 								<div class="work-process__inner">
 									<div class="work-process__block">
-										<div class="work-process__title wow bounceInDown">Процесс работы</div>
-										<ul class="work-process__list wow bounceInUp" data-wow-delay="250ms">
+										<div class="work-process__title wow bounceInUp">Процесс работы</div>
+										<ul class="work-process__list wow bounceInUp" data-wow-delay="50ms">
 											<li>1. Связаться с нами удобным для Вас способом.</li>
 											<li>2. Заполнить анкету/рассказать пожелания к заказу.</li>
 											<li>3. Оплатить заказ, оплачивая вы попадаете в очередь.</li>
@@ -144,9 +133,9 @@
 							<div class="why-us">
 								<div class="why-us__inner">
 									<div class="why-us__block">
-										<div class="why-us__title wow bounceInDown">Почему именно мы?</div>
+										<div class="why-us__title wow bounceInUp">Почему именно мы?</div>
 										<div class="why-us__subtitle text-semibold wow bounceInUp">Мы команда</div>
-										<div class="why-us__description wow bounceInUp" data-wow-delay="250ms">Команда не только между собой, но и с заказчиком. Мы вмесе с Вами создаем то, что будет радовать Вас, Ваших клиентов и партнеров.</div>
+										<div class="why-us__description wow bounceInUp" data-wow-delay="50ms">Команда не только между собой, но и с заказчиком. Мы вмесе с Вами создаем то, что будет радовать Вас, Ваших клиентов и партнеров.</div>
 									</div>
 									<div class="why-us__inner_img wow bounceInUp"></div>
 								</div>
@@ -160,8 +149,8 @@
 						<div class="slide__content container">
 							<div class="prices">
 								<div class="prices__col">
-									<div class="prices__title wow bounceInDown">Прайс</div>
-									<div class="services wow bounceInUp" data-wow-delay="250ms">
+									<div class="prices__title wow bounceInUp">Прайс</div>
+									<div class="services wow bounceInUp" data-wow-delay="50ms">
 										<div class="services__item">
 											<div class="service" data-target="#serviceStandart">
 												<div class="service__name">Стандартное графическое оформление</div>
@@ -263,16 +252,15 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="./js/fullpage.js"></script>
 	<script src="./js/bootstrap-custom.min.js"></script>
-	<script src="./js/mai.js"></script>
 	<script>
 var myFullpage = new fullpage('#fullpage', {
 	//Навигация
 	menu: '.header',
 	lockAnchors: false,
 	anchors:['Intro', 'whatWeDo', 'workProcess', 'whyUs', 'Prices', 'Order','Socials'],
-	navigation: false,
-	navigationPosition: 'right',
-	navigationTooltips: ['firstSlide', 'secondSlide'],
+	navigation: true,
+	navigationPosition: 'left',
+	navigationTooltips: [],
 	showActiveTooltip: true,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
@@ -342,52 +330,49 @@ var myFullpage = new fullpage('#fullpage', {
 });
 </script>
 <script type="text/javascript">
-	window.onscroll = function() {
+		function showMessage() {
+  	document.getElementById('whatWeDo_2').style.color = '#fff';
+  	document.getElementById('workProcess_2').style.color = '#fff';
+  	document.getElementById('whyUs_2').style.color = '#fff';
+  	document.getElementById('Prices_2').style.color = '#fff';
+  	document.getElementById('Order_2').style.color = '#fff';
 
-	if(document.location.hash == '#Order')
-		{
-		document.getElementById('Order_2').style.color = '#f3a7f6';
-		document.getElementsByClassName('header-menu__text').style.height = '10px;';
+  }
+</script>
+<script type="text/javascript">
+	window.onscroll = function() {
+	var BlockName = document.body.className;
+	var AllBlock = ["fp-viewing-Intro-0" , "fp-viewing-whatWeDo-0" , "fp-viewing-workProcess-0" , "fp-viewing-whyUs-0" , "fp-viewing-Prices-0" , "fp-viewing-Order-0","fp-viewing-Socials-0"];
+	switch (BlockName) {
+  	case 'fp-viewing-Intro-0':
+    showMessage();
+    break;
+ 	case 'fp-viewing-whatWeDo-0':
+    showMessage();
+    document.getElementById('whatWeDo_2').style.color = '#ffd8ff';
+    break;
+  	case 'fp-viewing-workProcess-0':
+  	showMessage();
+  	document.getElementById('workProcess_2').style.color = '#ffd8ff';
+    break;
+    case 'fp-viewing-whyUs-0':
+    showMessage();
+    document.getElementById('whyUs_2').style.color = '#ffd8ff';
+    break;
+    case 'fp-viewing-Prices-0':
+    showMessage();
+    document.getElementById('Prices_2').style.color = '#ffd8ff';
+    break;
+    case 'fp-viewing-Order-0':
+    showMessage();
+    document.getElementById('Order_2').style.color = '#ffd8ff';
+    break;
+    case 'fp-viewing-Socials-0':
+    showMessage();
+    break;
+  	default:
+}
 	}
-	else {
-		document.getElementById('Order_2').style.color = '#fff';
-	}
-		if(document.location.hash == '#Prices')
-		{
-		document.getElementById('Prices_2').style.color = '#f3a7f6';
-	}
-	else {
-		document.getElementById('Prices_2').style.color = '#fff';
-	}
-	if(document.location.hash == '#whyUs')
-		{
-		document.getElementById('whyUs_2').style.color = '#f3a7f6';
-	}
-	else {
-		document.getElementById('whyUs_2').style.color = '#fff';
-	}
-	if(document.location.hash == '#workProcess')
-		{
-		document.getElementById('workProcess_2').style.color = '#f3a7f6';
-	}
-	else {
-		document.getElementById('workProcess_2').style.color = '#fff';
-	}
-	if(document.location.hash == '#whatWeDo')
-		{
-		document.getElementById('whatWeDo_2').style.color = '#f3a7f6';
-	}
-	else {
-		document.getElementById('whatWeDo_2').style.color = '#fff';
-	}
-	if(document.location.hash == '#Intro')
-		{
-		document.getElementById('Intro_2').style.color = '#f3a7f6';
-	}
-	else {
-		document.getElementById('Intro_2').style.color = '#fff';
-	}
-	}
-	</script>	
+	</script>
 </body>
 </html>

@@ -845,15 +845,16 @@ svg {
 @media (min-width: 1920px) {
 	.work-process__inner {
 		align-items: stretch;
+		top: -150px;
 	}
 }
 .work-process__inner_img {
 	content: '';
 	display: none;
-	max-width: 1126px;
-	max-height: 672px;
-	width: 100%;
-	height: 100%;
+	max-width: 1526px;
+	max-height: 872px;
+	width: 60vw;
+	height: 60vh;
 	background-image: url('../img/crystals.png');
 	background-repeat: no-repeat;
 	background-position: center right;
@@ -869,7 +870,7 @@ svg {
 	.work-process__inner_img {
 		position: absolute;
 		top: -30px;
-		right: -260px;
+		right: -100px;
 		bottom: 0;
 		background-position: top right;
 	}
@@ -880,6 +881,36 @@ svg {
 		width: 100%;
 	}
 }
+@media (max-width: 1360px) {
+	.work-process__block {
+		padding-left: 100px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.work-process__block {
+		padding-left: 0px;
+	}
+}
+
+@media (max-width: 1360px) {
+	.what-we-do {
+		padding-left: 100px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.why-us__block {
+		padding-left: 0px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.what-we-do {
+		padding-left: 0px;
+	}
+}
+
 .work-process__title {
 	color: #fff;
 	font-size: 36px;
@@ -895,8 +926,6 @@ svg {
 	height: 3px;
 	margin: 30px 0 0;
 	background-color: #ffd8ff;
-	.wow;
-	.bounceInUp;
 }
 @media (min-width: 1920px) {
 	.work-process__title:after {
@@ -927,15 +956,16 @@ svg {
 @media (min-width: 1920px) {
 	.why-us__inner {
 		align-items: stretch;
+		top: -150px;
 	}
 }
 .why-us__inner_img {
 	content: '';
 	display: none;
-	max-width: 745px;
-	max-height: 830px;
-	width: 100%;
-	height: 100%;
+	max-width: 700px;
+	max-height: 700px;
+	width: 60vw;
+	height: 60vw;
 	background-image: url('../img/wheel.png');
 	background-repeat: no-repeat;
 	background-position: center right;
@@ -950,15 +980,44 @@ svg {
 @media (min-width: 1920px) {
 	.why-us__inner_img {
 		position: absolute;
-		top: -120px;
-		right: -100px;
+		top: -100px;
+		right: 40px;
 		bottom: 0;
 		background-position: top right;
 	}
 }
+
+
 .why-us__block {
 	max-width: 680px;
 	width: 100%;
+}
+
+@media (max-width: 1360px) {
+	.why-us__block {
+		padding-left: 100px;
+
+	}
+}
+
+@media (max-width: 1000px) {
+	.why-us__block {
+		padding-left: 0px;
+
+	}
+}
+@media (max-width: 1360px) {
+	.prices {
+		padding-left: 100px;
+
+	}
+}
+
+@media (max-width: 1000px) {
+	.prices {
+		padding-left: 0px;
+
+	}
 }
 .why-us__title {
 	color: #fff;
@@ -1302,3 +1361,125 @@ svg {
     opacity: 0.30;
 }
 
+.fp-left {
+
+}
+
+#fp-nav {
+	position: fixed;
+	top: 50%;
+	left: 10px;
+	z-index: 100;
+}
+@media (min-width: 1440px) {
+	#fp-nav {
+		left: 40px;
+	}
+}
+#fp-nav li + li {
+	margin: 30px 0 0;
+}
+@media (min-width: 1920px) {
+	#fp-nav li + li {
+		margin: 60px 0 0;
+	}
+}
+#fp-nav a {
+	display: block;
+	padding: 10px;
+}
+#pp-nav span {
+	position: relative;
+	display: block;
+	width: 10px;
+	height: 4px;
+	background-color: #f0eff1;
+	cursor: pointer;
+}
+#fp-nav span:before {
+	content: '';
+	display: none;
+	position: absolute;
+	top: -3px;
+	right: 0;
+	bottom: -3px;
+	left: 0;
+	background-image: url('../img/pp-nav.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease, visibility .2s ease, left .2s ease, right .2s ease;
+}
+@media (min-width: 1440px) {
+	#fp-nav span:before {
+		display: block;
+	}
+}
+#fp-nav span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #ffd8ff;
+	transition: top .2s ease, bottom .2s ease;
+}
+#fp-nav a.active span {
+	background-color: #ffd8ff;
+}
+#fp-nav a.active span:before {
+	right: -30px;
+	left: -30px;
+	opacity: 1;
+	visibility: visible;
+}
+#fp-nav a.active span:after,
+#fp-nav a:not(.active):hover span:after {
+	top: -3px;
+	bottom: -3px;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 0px; 
+    height: 3em;
+    margin: 25px;
+    position:relative;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 7px;
+    width: 12px;
+    margin: -6px 0 0 -2px;
+    border-radius: 100%;
+ }
+
+ #fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 12px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: 0px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 10px;
+    height: 5px;
+    margin: -5px 0px 0px -5px;
+}

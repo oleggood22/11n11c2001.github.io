@@ -3434,8 +3434,8 @@
     /**
     * Shows a message in the console of the given type.
     */
-    function showError(type, text){
-        window.console && window.console[type] && window.console[type]('fullPage: ' + text);
+   function showError(type, text){
+        //window.console && window.console[type] && window.console[type]('fullPage: ' + text);
     }
 
     /**
