@@ -1483,3 +1483,10 @@ svg {
     height: 5px;
     margin: -5px 0px 0px -5px;
 }
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 12px;
+    height: 5px;
+    margin: -5px 0px 0px -2px;
+}
