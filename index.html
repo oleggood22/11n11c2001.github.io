@@ -7,18 +7,10 @@
 	<link rel="stylesheet" href="./css/fullpage.css">
  	<link rel="stylesheet" href="./css/style.css">
  	<link rel="stylesheet" href="./css/animate.css">
+ 	<link rel="stylesheet" type="text/css" href="./js/main.js">
  	<script src="./js/wow.js"></script>
 	<script>new WOW().init()</script>
-	<script type="text/javascript">
-		   window.addEventListener('scroll', function(e) {
-        	if($(window).scrollTop()<50){
-            $('.wow').removeClass('animated');
-            $('.wow').removeAttr('style');
-            new WOW({}).init();
-
-        }
-     });
-	</script>
+	<script src="./js/fullpage.js"></script>
 </head>
 <body>
 		<div class="layout">
@@ -68,7 +60,7 @@
 		</div>
 		<div class="layout__content">
 			<div class="landing" id="fullpage">
-				<div class=" section " id="intro">
+				<div class=" section fp-section fp-table active fp-completely" id="intro">
 					<div class="slide">
 						<div class="slide__background slide__background_intro"></div>
 						<div class="slide__content container">
@@ -80,7 +72,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section fp-section fp-table active fp-completely" id="what-we-do">
+				<div class="section fp-section fp-table fp-completely" id="what-we-do">
 					<div class="slide">
 						<div class="slide__background slide__background_what-we-do"></div>
 						<div class="slide__content container">
@@ -115,7 +107,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section fp-section fp-table active fp-completely" id="work-process">
+				<div class="section fp-section fp-table fp-completely" id="work-process">
 					<div class="slide">
 						<div class="slide__background slide__background_process"></div>
 						<div class="slide__content container">
@@ -136,7 +128,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section fp-section fp-table active fp-completely" id="why-us">
+				<div class="section fp-section fp-table fp-completely" id="why-us">
 					<div class=" slide ">
 						<div class="slide__background slide__background_why-us"></div>
 						<div class="slide__content container">
@@ -153,7 +145,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section fp-section fp-table active fp-completely" id="prices">
+				<div class="section fp-section fp-table fp-completely" id="prices">
 					<div class=" slide ">
 						<div class="slide__background slide__background_price"></div>
 						<div class="slide__content container">
@@ -225,7 +217,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="section" id="order">
+				<div class="section fp-section fp-table fp-completely" id="order">
 					<div class=" slide ">
 						<div class="slide__background slide__background_order"></div>
 						<div class="slide__content container">
@@ -238,7 +230,7 @@
 						</div>
 					</div>
 				</div>
-				<div class=" section ">
+				<div class="section fp-section fp-table fp-completely">
 					<div class=" slide ">
 						<div class="slide__background slide__background_contacts"></div>
 						<div class="slide__content container">
@@ -260,7 +252,6 @@
 		</div>
 	</div>
 	<script src="./js/jquery-3.3.1.min.js"></script>
-	<script src="./js/fullpage.js"></script>
 	<script src="./js/bootstrap-custom.min.js"></script>
 	<script>
 var myFullpage = new fullpage('#fullpage', {
@@ -317,7 +308,7 @@ var myFullpage = new fullpage('#fullpage', {
 	responsiveWidth: 1000,
 	responsiveHeight: 0,
 	responsiveSlides: false,
-	parallax: false,
+	parallax: true,
 	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	cards: false,
 	cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
